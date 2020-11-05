@@ -24,3 +24,4 @@ def test_is_power_of_two():
     assert power_of_two.is_power_of_two(2048) == 'YES'
 
 
+
