@@ -2,3 +2,5 @@
 __pycache__
 init
 .vscode
+recursion/__pycache__
+recursion/.pytest_cache
