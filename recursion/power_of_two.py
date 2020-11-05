@@ -1,5 +1,10 @@
-#Дано натуральное число N. Выведите слово YES, если число N является точной степенью двойки, или слово NO в противном случае.
-#Операцией возведения в степень пользоваться нельзя!
 
-def is_power_of_two(N):
-    return 'YES'
+N = int(input())
+def power(x):
+    if x == 1 or x == 2:
+        return ("YES")
+    elif x % 2 != 0:
+        return ("NO")
+    else:
+        return power(x//2)
+print(power(N))
