@@ -2,4 +2,15 @@
 #Операцией возведения в степень пользоваться нельзя!
 
 def is_power_of_two(N):
-    return 'YES'
+  if(N != 2):
+    if(N % 2 == 0):
+      N = N / 2
+      is_power_of_two(N)
+    else: 
+      print("No")
+  else:
+    print("Yes")
+  
+
+N = int(input("Print any number: "))
+is_power_of_two(N)
