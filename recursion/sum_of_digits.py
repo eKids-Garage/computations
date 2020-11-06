@@ -1,6 +1,14 @@
 # Дано натуральное число N. Вычислите сумму его цифр.
 # При решении этой задачи нельзя использовать цикл, а также строки, списки, массивы
-
+summa=0
 def sum(N):
-    return 0
 
+  global summa
+  digit = N % 10
+  summa+=digit
+  if N//10>=1:
+    return sum(N//10)
+  else:
+    return summa
+
+print(sum(748296))
