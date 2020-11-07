@@ -6,7 +6,7 @@ def sum(N):
   global summa
   digit = N % 10
   summa+=digit
-  if N//10>=1:
+  if N>=10:
     return sum(N//10)
   else:
     return summa
