@@ -2,5 +2,12 @@
 # При решении этой задачи нельзя использовать цикл, а также строки, списки, массивы
 
 def sum(N):
-    return 0
+  if N < 10:
+    return N
+  else:
+    return N % 10 + sum(N // 10)                      
 
+print(sum(265))
+print(sum(0))
+print(sum(3756124786329999))
+print(sum(3621855554))
