@@ -1,5 +1,16 @@
-# Дано натуральное число N>1. Проверьте, является ли оно простым. 
-# Программа должна вывести слово YES, если число простое и NO, если число составное. 
-
 def is_prime(N):
-    return "YES"
+  i = 1
+  c = 0
+  if N > 3:
+    while i <= N // 2:
+      if N % i == 0 and i != 1:
+        c = "NO"
+        break;
+      else:
+        c = "YES"
+      i = i + 1
+  else:
+    c = "YES" 
+  return c
+N = int(input())
+print(is_prime(N))
