@@ -8,7 +8,7 @@ def pal(word, c):
   else:
     return ("NO")
 
-word = str(input())
 
+word = str(input())
 c = 0
 print(pal(word, c))
