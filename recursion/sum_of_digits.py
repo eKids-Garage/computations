@@ -1,9 +1,20 @@
-def sum(N):
-  a = 0
-  if N // 10 != 0:
-    a = a + sum(N // 10) + N % 10
-  else:
-    a = a + N % 10
-  return a
 N = int(input())
-print(sum(N))
+k = 1
+def is_prime(a):
+  i = 1
+  c = 0
+  if a > 3:
+    while i <= a // 2:
+      if a % i == 0 and i != 1:
+        c = "NO"
+        break;
+      else:
+        c = "YES"
+      i = i + 1
+  else:
+    c = "YES" 
+  return c
+while k < N + 1:
+  if(is_prime(k) == "YES" and N % k == 0):
+    print(k)
+  k = k + 1
