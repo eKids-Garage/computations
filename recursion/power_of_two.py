@@ -1,5 +1,11 @@
-#Дано натуральное число N. Выведите слово YES, если число N является точной степенью двойки, или слово NO в противном случае.
-#Операцией возведения в степень пользоваться нельзя!
+def power_of_two(N):
+  c = 1
+  while (c < N):
+    c = c * 2
+    if c == N:
+      return "YES"
+  return "NO"
 
-def is_power_of_two(N):
-    return 'YES'
+
+N = int(input())
+print (power_of_two(N))
