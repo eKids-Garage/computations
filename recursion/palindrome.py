@@ -1,5 +1,14 @@
-# Дано слово, состоящее только из строчных латинских букв. 
-# Проверьте, является ли это слово палиндромом. Выведите YES или NO.
+def pal(word, c):
+  l = len(word)
+  if word[l - c - 1] == word[c]:
+    if c == (l // 2):
+      return ("YES")
+    else:
+      return pal(word, c + 1)
+  else:
+    return ("NO")
 
-def is_palindrome(word):
-    return "YES"
+word = str(input())
+
+c = 0
+print(pal(word, c))
