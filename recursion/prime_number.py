@@ -10,9 +10,9 @@ def divide_by_c(N, c):
         print(str(N) + " делится без остатка на " + str(c))
         return "NO"
 
-    if (c == int(N**0.5)):
+    if (c > N ** 0.5):
         return "YES"
     
     return divide_by_c(N, c + 1)
 
-print(is_prime(1233))
+print(is_prime(1231))
