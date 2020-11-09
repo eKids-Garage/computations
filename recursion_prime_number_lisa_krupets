@@ -1,0 +1,17 @@
+import math
+
+def is_prime(N):
+  c = 2
+
+  while N > c:
+
+    if ((N % c) == 0) and (c <= math.sqrt(N)): 
+      print ('YES')
+      print('First divider is', c)
+      break
+
+    c = c + 1
+
+    if c == N:
+      print ('NO')
+      break
