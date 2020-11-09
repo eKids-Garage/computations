@@ -3,7 +3,7 @@
 N = int(input("Введите число: "))
 
 def is_power_of_two(N):
-    if N == 1:
+    if N == 1 or N == 2:
       return "YES"
     else:
       if N % 2 != 0:
