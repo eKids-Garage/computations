@@ -1,5 +1,9 @@
-# Дано натуральное число N>1. Проверьте, является ли оно простым. 
-# Программа должна вывести слово YES, если число простое и NO, если число составное. 
+def is_prime(N, k):
 
-def is_prime(N):
-    return "YES"
+    if N==1 or k>(N/2):
+        return "YES!!"
+
+    if N%k==0 :
+        return "NO!!"
+
+    return is_prime(N, k+1)
