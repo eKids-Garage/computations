@@ -1,0 +1,12 @@
+def  prime_div(N):
+  n = N
+  k = 2
+
+  while (n % k < k):
+
+    if (n % k == 0):
+      print (k)
+      n = n // k
+    elif (n % k != 0): 
+      k = k + 1
+
