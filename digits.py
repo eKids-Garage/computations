@@ -1,17 +1,13 @@
-def reverse(N):
-    if N < 10:
-        return N
+# Дано натуральное число N>1. Выведите все простые множители этого числа k в порядке неубывания с учетом кратности.  
+
+def prime_div(N, k=2):
+  if N/k<k:
+    print(N)
+  else:
+    if N%k==0:
+      print(k)
+      prime_div(N//k,k)
     else:
-        print(N % 10)
-        return (reverse(N // 10))
+      prime_div(N,k+1)
 
-
-def direct(N):
-    if N < 10:
-      return N
-    else:
-      print (direct(N // 10))
-      return N % 10
-
-print(reverse(304))
-print(direct(304))
+prime_div(36)
