@@ -5,3 +5,6 @@
 
 def is_prime(N):
     return "YES"
+
+def is_prime_tail(N, c):
+    return "YES"
