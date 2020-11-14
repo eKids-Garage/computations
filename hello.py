@@ -1,14 +1,12 @@
-# Дано слово, состоящее только из строчных латинских букв. 
-# Проверьте, является ли это слово палиндромом. Выведите YES или NO.
-
-word = input()
-def is_palindrome(word,i=0) :
-  if (i>=len(word)-i-1):
-    print ('YES')
-  
-  elif (word[i]==word[len(word)-i-1]) :
-    i=i+1
-    is_palindrome(word, i)
-  
-  else : print ('NO')
-is_palindrome(word)
+# Дано натуральное число N. Вычислите сумму его цифр.
+# При решении этой задачи нельзя использовать цикл, а также строки, списки, массивы
+def sum(N,s=0 ):
+    if (N<1):
+      print(s)
+    else:
+      s=s+(N%10)
+      N=N//10
+      sum(N,s)
+x=input()
+N=int(x)
+sum(N)
