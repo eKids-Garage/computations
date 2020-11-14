@@ -6,3 +6,6 @@
 def sum(N):
     return 0
 
+def sum_tail(N, s):
+    return 0
+
