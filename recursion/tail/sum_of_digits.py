@@ -1,11 +1,14 @@
-# Дано натуральное число N. Вычислите сумму его цифр.
-# При решении этой задачи в функциях sum и sum_tail нельзя использовать цикл, а также строки, списки, массивы
-# Оформите в виде обычной и хвостовой рекурсии
-# Вариант с хвостовой рекурсией преобразуйте в цикл while
+def sum(Value):
 
-def sum(N):
-    return 0
+  Num=Value%10
+  Value=Value//10
 
-def sum_tail(N, s):
-    return 0
+  if(Value!=0):
+    return sum(Value)+Num
 
+
+  else:
+    return Num
+    print(Value)
+
+    
