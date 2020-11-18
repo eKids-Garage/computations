@@ -1,0 +1,39 @@
+def is_prime(N):
+  c = 2
+
+  if (N % c == 0): 
+    print ('YES')
+    print('First divider is', c)
+    return 
+  
+  c = c + 1
+
+
+  return is_prime(c)
+
+  if c == N:
+    print ('NO')
+    return
+
+
+
+
+
+
+
+
+
+def is_prime_tail(N,c):
+
+  if N % c == 0:
+    print ('YES')
+    c = c + 1
+    return is_prime_tail(N,c)
+    
+
+  if c == N:
+    print ('NO')
+    return is_prime_tail(N,c)
+      
+
+
