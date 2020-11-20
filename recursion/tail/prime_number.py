@@ -3,8 +3,19 @@
 # Оформите в виде обычной и хвостовой рекурсии
 # Вариант с хвостовой рекурсией преобразуйте в цикл while
 
-def is_prime(N):
-    return "YES"
+def is_prime(n):
+  return("1")
+#я не знаю как сделать обычную рекурсию:(
+    
+def is_prime_tail(n, k):
+  if k <= n - n % 2:
+    if n % k == 0:
+      print("NO")
+    else:
+      is_prime_tail(n, k + 1)
+  else:
+    print("YES")
 
-def is_prime_tail(N, c):
-    return "YES"
+n = int(input("Number:"))
+k = 2
+is_prime_tail(n, k)
