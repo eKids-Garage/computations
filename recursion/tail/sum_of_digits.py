@@ -18,3 +18,12 @@ def sum_tail(N, s = 0):
     s += N%10
     return sum_tail(N//10, s)
 
+def sum_using_while(N):
+
+    sum = 0
+
+    while N//10 != 0:
+        sum += N%10
+        N //= 10
+
+    return sum + N%10
