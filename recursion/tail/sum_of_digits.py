@@ -13,7 +13,8 @@ def sum(N):
 def sum_tail(N, s = 0):
 
     if N//10 == 0:
-        return N%10
+       return s + N%10
 
-    return sum_tail(N//10, s+= (N%10) )
+    s += N%10
+    return sum_tail(N//10, s)
 
