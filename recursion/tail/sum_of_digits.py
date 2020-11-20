@@ -4,8 +4,18 @@
 # Вариант с хвостовой рекурсией преобразуйте в цикл while
 
 def sum(N):
-    return 0
+  if N < 10:
+    return N
+  else:
+    return N % 10 + sum(N // 10)  
 
-def sum_tail(N, s):
-    return 0
+def sum_tail(N, s = 0):
+  if N < 10:
+    return N + s
+  else:
+    s = s + N % 10
+    N = N // 10
+    return sum_tail(N, s)
+
+    
 
