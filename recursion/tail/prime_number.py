@@ -4,8 +4,33 @@
 # Вариант с хвостовой рекурсией преобразуйте в цикл while
 
 def is_prime(n):
-  return("YES")
-
+  return("1")
+#я не знаю как сделать обычную рекурсию:(
     
 def is_prime_tail(n, k):
-  return("YES")
+  if k <= n - n % 2:
+    if n % k == 0:
+      print("NO")
+    else:
+      is_prime_tail(n, k + 1)
+  else:
+    print("YES")
+
+n = int(input("Number:"))
+k = 2
+is_prime_tail(n, k)
+
+while k <= n - n % 2:
+  if k == n - n % 2:
+    if n % k == 0:
+      print("NO")
+      k = n + 1
+    else:
+      print("YES")
+      k = k + 1
+  else:
+        if n % k == 0:
+          print("NO")
+          k = n + 1
+        else:
+          k = k + 1
