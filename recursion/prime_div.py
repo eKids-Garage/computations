@@ -14,4 +14,5 @@ def prime_div(N):
      
 
 print(1.0)
+print(2.0)
 prime_div(16)
