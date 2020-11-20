@@ -9,13 +9,15 @@ def sum(N):
   else:
     return N % 10 + sum(N // 10)  
 
-def sum_tail(N, s = 0):
-  if N < 10:
-    return N + s
-  else:
+def sum_tail(N):
+  s = 0
+  while N > 0:
     s = s + N % 10
     N = N // 10
-    return sum_tail(N, s)
+  return s
+
+'''print(sum_tail(329))
+print(sum_tail(2))'''
 
     
 
