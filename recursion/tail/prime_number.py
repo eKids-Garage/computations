@@ -6,13 +6,15 @@
 # вариант с циклом while
 def divide_by_c_cycle(N, c):
 
-    while c != N ** 1/2:
-
+    while c < N ** 0.5:
+       
         if N % c == 0:
             print(str(N) + " делится без остатка на " + str(c))
             return "NO"
+       
+        c = c + 1
 
-        return "YES"   
+    return "YES"   
 
 
 # вариант с хвостовой рекурсией
@@ -36,5 +38,5 @@ def is_prime_tail(N):
     return divide_by_c_tail(N, 2)
 
 
-print(is_prime(1231))
+print(is_prime(81))
 print(is_prime_tail(1231))
