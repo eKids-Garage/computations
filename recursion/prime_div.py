@@ -1,9 +1,15 @@
-# Дано натуральное число N>1. Выведите все простые множители этого числа k в порядке неубывания с учетом кратности.  
 
-def divide(N, k):
-<<<<<<< HEAD
-    return k
-=======
-    return k
-  
->>>>>>> 4f07df098211a96d113141a9479aa3dc8f991dba
+def prime_div(N):
+  k = 2
+  while (N % k != 0):
+    k += 1
+  return k
+
+
+N = int(input())
+k = prime_div(N)
+print (k)
+while (N > 1):
+  N = N / k
+  k = prime_div(N)
+  print (k)
