@@ -13,3 +13,4 @@ while (N > 1):
   N = N / k
   k = prime_div(N)
   print (k)
+  
