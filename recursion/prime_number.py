@@ -15,4 +15,3 @@ if is_prime(N) == 1:
   print ("YES")
 else:
   print ("NO")
-
