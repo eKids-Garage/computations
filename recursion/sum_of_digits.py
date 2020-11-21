@@ -19,3 +19,9 @@ print (sum(N))
 
 s = 0
 print (sum_tail(N, s))
+
+S = 0
+while (N >= 10):
+  S += N % 10
+  N = N // 10
+print (S + N)
