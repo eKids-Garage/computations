@@ -3,7 +3,15 @@
 # Вариант с хвостовой рекурсией преобразуйте в цикл while
 
 def dividors(N,k=2):
-  return 0
+  if N/k<k:
+    return [N]
+  else:
+    if N%k==0:
+      return [k]+dividors(N//k,k)
+    else:
+      return dividors(N,k+1)
+
+
 
 def dividors_tail(N, k=2):
   if N/k<k:
@@ -27,4 +35,8 @@ while k<=N:
 print("\n")
 #while
 
+result=dividors(36)
+for i in result:
+  print(i)
+print("\n")
 dividors_tail(36)
