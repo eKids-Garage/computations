@@ -6,12 +6,11 @@ def is_prime(N):
   while N > c:
 
     if ((N % c) == 0) and (c <= math.sqrt(N)): 
-      print ('YES')
-      print('First divider is', c)
+      print ('NO')
       break
 
     c = c + 1
 
     if c == N:
-      print ('NO')
+      print ('YES')
       break
