@@ -3,8 +3,33 @@
 # Вариант с хвостовой рекурсией преобразуйте в цикл while
 
 def dividors(N):
+  #не смог(((((
     return 0
 
 
 def dividors_tail(N, k):
-    return 0
+  if N // k >= k:
+    if N % k == 0:
+      print(k)
+      N = N // k
+    else: 
+	    k = k + 1
+    dividors_tail(N, k)
+  else:
+    print(N)
+
+
+dividors_tail(51, 2)   
+
+
+def dividors_tail_while(N, k):
+  while N // k >= 1:
+    if N % k == 0:
+      print(k)
+
+      N = N // k
+    else:
+      k += 1
+ 
+print("..................................")
+dividors_tail_while(51, 2)
