@@ -17,7 +17,15 @@ def sum_tail(N, s):
   s = s + N % 10
   N = N//10
   return sum_tail(N,s)
-    
+
+
+def sum_tail_while(N, s):
+  while N > 1:
+    s = s + N % 10
+    N = N//10
+  return s
+  
+print(sum_tail_while(586721, 0))    
 print(sum(586721))
 
 print(sum_tail(586721, 0))
