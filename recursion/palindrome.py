@@ -7,4 +7,4 @@ def is_palindrome(word):
   else:
       print("No")
 
-is_palindrome("ара")
+is_palindrome("топот")
