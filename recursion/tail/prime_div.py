@@ -5,7 +5,18 @@
 
 # вариант с циклом while
 def dividors(N):
-    return 0
+    
+    k = 2
+    
+    while (N / k >= k):
+        if (N % k == 0):
+            print (str(N) + " | " + str(k))
+            N = N // k
+        else:
+            k = k + 1
+    
+    print (str(N) + " | " + str(N) + " Всё!\n")
+
 
 # хвостовая рекурсия
 def dividors_tail(N, k):
@@ -23,6 +34,9 @@ def dividors_tail(N, k):
     dividors_tail(N, k)
 
 
+dividors(8235682364)
+dividors(243)
+dividors(850)
 dividors_tail(8235682364, 2)
 dividors_tail(243, 2)
 dividors_tail(850, 2)
