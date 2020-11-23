@@ -1,12 +1,21 @@
-def  prime_div(N):
-  n = N
-  k = 2
+def dividors_tail(Numb, div):
+  if (Numb%div == 0):
+    print (div)
+    return dividors_tail (Numb//div, div)
+  
+  elif(Numb==1):
+    return
 
-  while (n % k < k):
+  else:
+    return dividors_tail (Numb, div+1)
 
-    if (n % k == 0):
-      print (k)
-      n = n // k
-    elif (n % k != 0): 
-      k = k + 1
 
+def dividors_tail_while(Numb, div):
+  while(Numb != 1):
+    if (Numb%div == 0):
+      print (div)
+      Numb = Numb//div
+
+    else:
+      div = div+1
+  
