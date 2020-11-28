@@ -12,4 +12,4 @@ def divide(N, k):
 
 print(divide(259,2))
   
- 
+   
