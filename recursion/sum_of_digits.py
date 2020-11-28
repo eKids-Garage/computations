@@ -7,7 +7,5 @@ def sum(N):
   else:
     return N % 10 + sum (N // 10)
 
-
-N = int(input())
-print (sum(N))
+print (sum(65356))
 
