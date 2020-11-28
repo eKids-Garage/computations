@@ -9,4 +9,4 @@ def is_power_of_two(N):
   elif N > 2:
     return is_power_of_two(N/2)
 
-print(is_power_of_two(512))
+print(is_power_of_two(6)) 
