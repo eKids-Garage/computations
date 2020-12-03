@@ -2,10 +2,19 @@
 # Программа должна вывести слово YES, если число простое и NO, если число составное. 
 # Оформите в виде обычной и хвостовой рекурсии
 # Вариант с хвостовой рекурсией преобразуйте в цикл while
+z=0
+x=1    
+def is_prime_tail(n):
+ global x 
+ global z
+ while x<n:
+   y=n%x
+   if y==0:
+     z += 1
+   x += 1   
+ if z<3:
+  print("Yes")
+ else:
+  print("No")    
 
-def is_prime(n):
-  return("YES")
-
-    
-def is_prime_tail(n, k):
-  return("YES")
+is_prime_tail(8)
