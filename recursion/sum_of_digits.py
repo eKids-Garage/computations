@@ -7,7 +7,7 @@ def sum(a):
   s=0
   s=s+a%10
   if a//10>0:
-    return a%10+sum(a//10)
+    return a%10 + sum(a//10)
   else:
     return s
 
