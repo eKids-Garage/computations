@@ -1,9 +1,9 @@
 import pytest
 
-import palindrome
-import prime_number
-import sum_of_digits
-import power_of_two
+import recursion.palindrome
+import recursion.prime_number
+import recursion.sum_of_digits
+import recursion.power_of_two
 
 def test_is_palindrome():
     assert palindrome.is_palindrome("ELLE") == 'YES'
