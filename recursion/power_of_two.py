@@ -2,4 +2,10 @@
 #Операцией возведения в степень пользоваться нельзя!
 
 def is_power_of_two(N):
-    return 'YES'
+	if N == 2:
+		return 'YES'
+	elif N%2 !=0:
+		return 'NO'
+	else:
+		return is_power_of_two(N/2)
+
