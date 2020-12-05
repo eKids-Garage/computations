@@ -2,6 +2,8 @@
 # как итеративно (используя цикл), так и рекурсивно.
 
 def sort_bubble(inp, k=0):
+  if len(inp) == 0:
+    return []
   for i in range(len(inp)-1-k):
     if inp[i]>inp[i+1]:
       inp[i+1], inp[i] = inp[i], inp[i+1]
