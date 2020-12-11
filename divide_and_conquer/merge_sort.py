@@ -3,9 +3,9 @@
 # так и при помощи хвостовой рекурсии. Желательно, но необязательно
 # реализовать оба варианта
 
-
 def merge_sort(arr):
     return arr
 
 def merge_sort_tail(arr):
     return arr
+
