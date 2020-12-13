@@ -1,2 +1,2 @@
-language = "undefined"
-run = ""
+language = "python3"
+run = "recursion/sum_of_digits.py"
