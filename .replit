@@ -1,2 +1,2 @@
 language = "undefined"
-run = ""
+run = "python recursion/is_power_of_two.py"
