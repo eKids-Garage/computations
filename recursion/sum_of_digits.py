@@ -6,7 +6,7 @@ def sum(N):
     a = a + N // 10
     N = N % 10
     sum(N)
-    return 0
+  return a
 N = int(input())
 print(sum(N))
 
