@@ -22,14 +22,6 @@ def merge(L, R):
   i1 = 0
   i2 = 0
   while i1 < len(L) and i2 < len(R):
-
-    if type(R[0]) == type([]):
-      if len(R[0]) == 1:
-        R[0]=R[0][0]
-    if type(L[0]) == type([]):
-      if len(L[0]) == 1:
-        L[0]=L[0][0]
-
     if L[i1] < R[i2]:
       res.append(L[i1])
       i1+=1
