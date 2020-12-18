@@ -1,13 +1,15 @@
 # Дано натуральное число N>1. Выведите все простые множители этого числа k в порядке неубывания с учетом кратности.  
 
 def divide(N, k):
-  if N < k:
-    return
-  while N % k < k:
-    if N % k == 0:
+  if n == 1:
+    return k
+  else:
+    if n % k == 0:
       print(k)
-      return divide(N // k, k)
-    else:
-      return divide (N, k + 1)
+      n = n // k
+    if n % k != 0:
+      k = k + 1
+  divide(n,k)
+ 
 
 divide(8, 2)
