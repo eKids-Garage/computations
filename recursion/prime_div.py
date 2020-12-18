@@ -8,5 +8,3 @@ def prime_div(N, k):
     if N % k != 0:
       k = k+1
   prime_div(N,k)
-
-prime_div(14,2)
