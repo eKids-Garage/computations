@@ -7,6 +7,6 @@ def prime_div(N, k):
       N = N // k
     if N % k != 0:
       k = k+1
-  prime_div(n,k)
+  prime_div(N,k)
 
-prime_div(144404043420,2)
+prime_div(14,2)
