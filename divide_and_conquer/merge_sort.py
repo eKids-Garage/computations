@@ -5,16 +5,8 @@
 def merge_sort(inp):
   if len(inp) < 2:
     return inp
-
-
   L = merge_sort(inp[:len(inp)//2])
   R = merge_sort(inp[len(inp)//2:])
-  if len(L) == 2:
-    if L[0] > L[1]:
-      L[0], L[1] = L[1], L[0]
-  if len(R) == 2:
-    if R[0] > R[1]:
-      R[0], R[1] = R[1], R[0]
   return merge(L, R)
 
 def merge(L, R):
@@ -35,3 +27,5 @@ def merge(L, R):
   return res
 
 print(merge_sort([4,7,1,9,2,3,6,5,8]))
+
+
