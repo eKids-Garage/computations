@@ -1,5 +1,5 @@
 def merge(arr1, arr2):
-  Arr = []
+  Arr = [ ]
   ind1 = 0
   ind2 = 0
 
