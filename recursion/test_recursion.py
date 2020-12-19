@@ -4,6 +4,7 @@ import palindrome
 import prime_number
 import sum_of_digits
 import power_of_two
+import prime_div
 
 def test_is_palindrome():
     assert palindrome.is_palindrome("ELLE") == 'YES'
