@@ -5,7 +5,7 @@
 
 def merge_sort(arr):
 
-    print(arr)
+    # print(arr)
     if (len(arr) > 1):
         # разбиваем на 2 части - L and R
         m = len(arr) // 2
@@ -36,9 +36,10 @@ def merge_sort(arr):
         return arr
 
 # ==========================
-a = [9, 4, 5, 2, 4, 8, 1, 0, 3]
-print (a)
 
+a = [9, 4, 5, 2, 4, 8, 1, 0, 3]
+
+print (a)
 
 print(merge_sort(a))
 
