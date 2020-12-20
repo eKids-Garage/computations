@@ -3,18 +3,18 @@
 # так и при помощи хвостовой рекурсии. Желательно, но необязательно
 # реализовать оба варианта 
 
-def merge(arr, Arr):
+def merge(one, two):
     Res = []
     i = 0
     j = 0
-    while i < len(arr) and j < len(Arr):
-        if arr[i] <= Arr[j]:
-            Res.append(arr[i]) 
+    while i < len(one) and j < len(two):
+        if one[i] <= two[j]:
+            Res.append(one[i]) 
             i += 1 
         else:
-            Res.append(Arr[j]) 
+            Res.append(two[j]) 
             j += 1 
-    Res += arr[i:] + Arr[j:] 
+    Res += one[i:] + two[j:] 
     return Res
 
 
@@ -26,6 +26,5 @@ def merge_sort(arr):
         R = arr[len(arr) // 2:] 
     return merge(merge_sort(L), merge_sort(R))
 
-list = [1, 5, 244, 15, 61, 176, 8, 4]
+list = [1, 5, 244, 16, 71, 451, 7, 4]
 print(merge_sort(list))
-
