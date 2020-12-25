@@ -1,7 +1,0 @@
-.pytest_cache
-__pycache__
-init
-.vscode
-recursion/__pycache__
-recursion/.pytest_cache
-.replit
