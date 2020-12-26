@@ -1,11 +1,37 @@
-# Реализуйте сортировку слиянием (merge sort)
-# Попытайтесь реализовать ее как при помощи обычной, 
-# так и при помощи хвостовой рекурсии. Желательно, но необязательно
-# реализовать оба варианта
+import random 
 
-def merge_sort(arr):
-    return arr
+length = random.randint(7,777) #  кол-во элементов генерируется
+array = []
+for i in  range (0 , length) : # от 0 до кол-ва элементов в списке 
+  array.append(random.randint(7,777))   # генерирует элементы массива и их туда добавляет
+print("первоначальный массив:",*array,"-----конец массива")
+print("")
 
-def merge_sort_tail(arr):
-    return arr
+def merge_sort(array):
+    if len(array) < 2:
+        return array
+    else:
+        half = len(array) // 2
+        R = merge_sort(array[half:])
+        L = merge_sort(array[:half])
+        return(merge_arrays(L,R))
 
+def merge_arrays(L,R):
+    result = []    
+    i = n = 0 
+    while len(L) > i  and len(R)> n  :
+        if L[i] < R[n]:
+            result.append(L[i])
+            i = i+1
+        else:
+            result.append(R[n])
+            n = n+1
+    if i < len(L):
+        result = result+(L[i:])
+        return result
+    if n <len(R):
+        result = result+(R[n:])
+        return result
+
+print(merge_sort(array))
+print('lenght was:',len(array))
