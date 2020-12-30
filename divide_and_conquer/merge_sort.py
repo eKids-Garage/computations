@@ -2,7 +2,7 @@ import random
 
 length = random.randint(7,777) #  кол-во элементов генерируется
 array = []
-for i in  range (0 , length) : # от 0 до кол-ва элементов в списке 
+for i in  range (0 , length) : # для всех элементов в списке
   array.append(random.randint(7,777))   # генерирует элементы массива и их туда добавляет
 print("первоначальный массив:",*array,"-----конец массива")
 print("")
