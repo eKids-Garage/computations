@@ -10,7 +10,7 @@ def palindrom(word,i,a):
     else:
             return "NO"
 
-word= [] # массив
+word = [] # массив
 word = input("введите слово : ")
 i = 0 # порядок элемента 
 a = -1 # порядок элементов с конца
