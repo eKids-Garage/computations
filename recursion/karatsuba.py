@@ -1,15 +1,50 @@
-def rec_mult(x, y, n):
-    if n == 1:
-        print("n = 1: x = {0}, y = {1}".format(x, y))
-        return x*y
-    else: 
-        a = x // 10**(n//2)
-        b = x % 10**(n//2)
-        c = y // 10**(n//2)
-        d = y % 10**(n//2)
+#retrieving two numbers
+x = input("Type your first number with 'power of two' size:")
+x = int(x)
+y = input("Type your second number with 'power of two' size:")
+y = int(y)
 
-        print("n = {4}: a = {0}, b = {1}, c = {2}, d = {3}".format(a, b, c, d, n))
+#retrieving N
+N = len(str(x))
 
-        return 10**n * rec_mult(a, c, n//2) + 10**(n//2) * (rec_mult(a, d, n//2) + rec_mult(b, c, n//2)) + rec_mult(b, d, n//2)
 
-print(rec_mult(9656, 8578, 4))
+#method 'recursive multiplication'
+def rec_mult(x, y, N):
+    
+    if N == 1:
+        return x * y
+    else:
+        a = x // 10**(N//2)
+        b = x % 10**(N//2)
+        c = y // 10**(N//2)
+        d = y % 10**(N//2)
+        
+        return 10**N * rec_mult(a, c, N//2) + 10**(N//2) * rec_mult(a, d, N//2) + 10**(N//2) * rec_mult(b, c, N//2) + rec_mult(b, d, N//2) 
+        
+
+
+#karatsuba method
+def karatsuba(x, y, N):
+    
+    if N == 1:
+        return x * y
+    else:
+        
+       a = x // 10**(N//2)
+       b = x % 10**(N//2)
+       c = y // 10**(N//2)
+       d = y % 10**(N//2)
+    
+    
+       res_1 = karatsuba(a, c, N//2)
+       res_2 = karatsuba(b, d, N//2)
+       res_3 = karatsuba(a + b, c + d, N//2)
+       res_4 = res_3 - res_2 - res_1
+       res_5 = res_1 * 10**N + res_4 * 10**(N//2) + res_2
+       
+       return res_5
+       
+       
+print('\nThe result after rec_ mult:' + str(rec_mult(x, y, N)))
+print('The result after karatsuba:' + str(karatsuba(x, y, N)))
+print('The result after usual calculating:' + str(x * y))
