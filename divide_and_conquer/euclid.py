@@ -1,4 +1,13 @@
-# Реализуйте алгоритм Евклида с помощью рекурсии
+def euclid(a, b):
+  while a != 0 and b != 0:
+    if a > b:
+      a = a%b;
+    else:
+      b = b%a;  
+  else:
+    if b > a:
+      print(b);
+    else:
+      print(a);
 
-def euclidus(a, b):
-    return a
+euclid(840, 320);    
