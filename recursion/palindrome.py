@@ -2,19 +2,18 @@
 # Проверьте, является ли это слово палиндромом. Выведите YES или NO.
 
 st = str(input())
+c = 0
+l = len(st)
 def is_palindrome(word):
-  l = len(st)
-  c = 0
-  k=0
-  while c!= l:
-    if st[c] == st[l-c-1]:
-      c+=1
-      k+=1
-    else:
-      print ("NO")
-      break
-  if k == l:
-    print("YES")
+  global l
+  global c
+  if word[l-c-1]==word[c]:
+    c+=1
+  else:
+    return "NO"
+  if c == l // 2:
+    return "YES"
+  return is_palindrome(word)
 
-is_palindrome(st)
+print(is_palindrome(st))
     
