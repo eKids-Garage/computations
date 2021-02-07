@@ -1,5 +1,6 @@
 # 
 
-def sieve(numbers):
-    return numbers
+def sieve(start, finish):
+    primes = []
+    return primes
 
