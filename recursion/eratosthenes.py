@@ -1,5 +1,8 @@
-# 
+# Написать программу, которая находит все простые числа в заданном 
+# интервале методом "Решето Эратосфена". 
+# start и finish - границы диапазона (включительно).
 
-def sieve(numbers):
-    return numbers
+def sieve(start, finish):
+    primes = []
+    return primes
 
