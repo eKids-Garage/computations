@@ -1,14 +1,7 @@
-# Реши задачу Иосифа Флавия:
-# где n - число солдат, k - шаг (2 - каждый второй (сосед), 3 - каждый третий и т.д.)
-# 
-# 1. survive(n, k) - используя массив. 
-# 2. survive_num(n, k) - без использования массива 
+def flav(w, k):
+  index = 0
 
-def survive(n, k):
-    return []
-
-
-def survive_num(n, k):
-    pos = 0
-    
-    return pos
+  while len(w) > 1:
+    index = (index + k - 1) % len(w) 
+    w.pop(index)
+  return w[0]
