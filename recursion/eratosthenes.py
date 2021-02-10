@@ -3,6 +3,27 @@
 # start и finish - границы диапазона (включительно).
 
 def sieve(start, finish):
+    
+    # создаём массив всех чисел в заданном интервале
+    arr = []
+    for i in range(start, finish + 1):
+        arr.append(i)
+    
+    # в этот массив будем записывать найденные простые числа
     primes = []
+
+    # впервом цикле перебираем все числа начиная с первого простого 2 
+    for p in range(2, finish + 1):
+        # во втором цикле проверяем числа из главного массива
+        for i in range (0, len(arr)):
+            if (p == arr[i]):
+                primes.append(p)
+            elif (arr[i] % p == 0):
+                # если делится без остатка на p, и если не равно самому p, то вычёркивем
+                arr[i] = -1
+            
+    #print(arr)
+
     return primes
 
+print(sieve(7,19))
