@@ -18,6 +18,7 @@ def survive(n, k, i = 0):
   return survive(n, k, i+1)
 
 
+
 print(survive(n,k))
 
 def survive_num(n, k):
