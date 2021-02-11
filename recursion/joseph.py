@@ -4,11 +4,30 @@
 # 1. survive(n, k) - используя массив. 
 # 2. survive_num(n, k) - без использования массива 
 
-def survive(n, k):
-    return []
+n = int(input())
+k = int(input())
 
+def survive(n, k, i = 0):
+  warriors = []
+
+  if not i:
+    warriors = [j for j in range(1,n+1)]
+  if len(warriors) < 2:
+    return warriors
+  warriors.remove(warriors[(i + k - 1) % len(warriors)])
+  return survive(n, k, i+1)
+
+
+print(survive(n,k))
 
 def survive_num(n, k):
-    pos = 0
-    
-    return pos
+  if n == 1:
+    return 1
+  return 1 + ((survive_num(n-1, k) + k - 1) % n)
+
+
+print(survive_num(n,k))
+
+
+
+  
