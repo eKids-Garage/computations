@@ -40,7 +40,6 @@ def sieve(primes,n,i):
         result.remove(0)
         result_message = 'Your prime digits - ',result
         print('result is ',result) 
-        result_message
 sieve(primes,n,i)
   
 
