@@ -2,6 +2,7 @@
 # интервале методом "Решето Эратосфена". 
 # start и finish - границы диапазона (включительно).
 
+
 def sieve(start, finish):
     primes = []
     return primes
