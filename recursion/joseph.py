@@ -7,8 +7,11 @@
 def survive(n, k):
     return []
 
+n = int(input('Число солдат:'))
+k = int(input('Шаг:'))
 
 def survive_num(n, k):
-    pos = 0
-    
-    return pos
+  if n == 1:
+    return 1
+  return 1 + (survive_num(n-1, k) + k - 1) % n
+print('Место под номером ', survive_num(n, k))
