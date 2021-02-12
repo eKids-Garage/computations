@@ -1,4 +1,5 @@
 
+
 '''Код без коментариев (почти)'''
 '''Код c  коментами ниже , строка 49 (лучше смотреть его - там понятнее)'''
 
@@ -30,23 +31,22 @@ def sieve(primes,n,i):
             while n <= finish :
                 primes[n] = 0
                 n = n + i 
-            sieve(primes,n,i)
+            return sieve(primes,n,i)
         else: 
-            sieve(primes,n,i)  
+            return sieve(primes,n,i)  
     else:
         if 1 in primes:
             primes.remove(1)
         result = set(primes)
         result.remove(0)
-        result_message = 'Your prime digits - ',result
-        print('result is ',result) 
-sieve(primes,n,i)
-  
+        result_message = 'Your prime digits = ' + str(result)
+        return result_message
+print(sieve(primes,n,i))
+
 
 
 
 """ Код с коментариями """
-
 
 '''получаем промежуток в ктором программма будет искать простые числа '''
 start   = int(input(' Start : '))
@@ -93,21 +93,21 @@ def sieve(primes,n,i):
                 primes[n] = 0 # забтваем n нулем потому что оно не простое
                 n = n + i # увеличиваем n чтоб цикл дальше пошел искать число кратноe i
             print('-----------') # чтоб было удобнее просматривать историю (отделяет)
-            sieve(primes,n,i) # после цикла запускаем функцию чтоб перейти к следующему числу 
-        else: # ну а если оно все-таки 0 то заупскаем функцию и все 
+            return sieve(primes,n,i) # после цикла запускаем функцию чтоб перейти к следующему числу 
+        else: # ну а еreturn сли оно все-таки 0 то заупскаем функцию и все 
             #( i увеличивается при каждом проходе функции так что  увеличивать не надо)
             print(' уже забито нулем')
-            sieve(primes,n,i)  
+            return sieve(primes,n,i)  
     else:
         if 1 in primes: # 1 не протсое число поэтому удаляем его из массива (если оно там есть)
             primes.remove(1) 
         result = set(primes) # превращаем результат во множество чтоб не удалять  нули 
         result.remove(0) # поскольку это множество то там останется ноль полюбому поэтому мы его удалим
         result_message = 'Your primes : ' + str(result)
-        print(result_message)
+        return result_message 
         # к сожалению множество нельзя отсортировать поэтому 
         # простые числа будут находится в "неправильном" порядке 
-sieve(primes,n,i)
+print(sieve(primes,n,i)) 
 
 
    
