@@ -4,11 +4,12 @@
 # 1. survive(n, k) - используя массив. 
 # 2. survive_num(n, k) - без использования массива 
 
-def survive(n, k):
-    return []
-
+n = int(input('число солдат ')) #количество войнов
+k = int(input('шаг ')) #через кого от первого надо убивать 
 
 def survive_num(n, k):
-    pos = 0
-    
-    return pos
+  res = 0
+  for i in range(1, n+1):
+    res = (res + k) % i
+  return(res + 1)
+print(survive_num(n, k))
