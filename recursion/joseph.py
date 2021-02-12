@@ -8,13 +8,13 @@
 def survive(n, k):
   al = [True for i in range(n)]
 
-  c = k-1
+  c = k - 1
   a = n
   p = 0
   while a != 1:
     if c == 0 and al[p]:
       al[p] = False
-      c = k-1
+      c = k - 1
       a -= 1
     # Никто не юзает дебагеры, все юзать print и input
     #   print("Killed ", p)
@@ -34,6 +34,11 @@ print(survive(10, 2))
 
 def survive_num(n, k):
   # решу завтра
-  pos = 0
+  # пишу из завтра решил
+  if n == 1:
+    return 1
 
-  return pos
+  return ((survive_num(n - 1, k) + k - 1) % n) + 1
+
+
+print(survive_num(10, 2))
