@@ -1,29 +1,13 @@
-def num_count(x):
-  num = 0
-  while(x > 10):
-    x //= 10
-    num += 1
-  num += 1
-  return num
+def karatsuba(x, y, n):
+    if n == 1:
+#        print("n = 1: x = {}, y = {}".format(x, y))
+        return x*y
+    else: 
+        a = x // 10**(n//2)
+        b = x % 10**(n//2)
+        c = y // 10**(n//2)
+        d = y % 10**(n//2)
 
+#        print("n = {}: a = {}, b = {1}, c = {}, d = {}".format(n, a, b, c, d))
 
-def karatsuba(x, y):
-  a = x // 10 ** (num_count(x) // 2)
-  b = x % 10 ** (num_count(x) // 2)
-  c = y // 10 ** (num_count(y) // 2)
-  d = y % 10 ** (num_count(y) // 2)
-
-  if (x == 10):
-      a = 1
-  if (y == 10):
-      c = 1
-
-  print(a, b, c, d)
-  
-  num = num_count(x)
-  res1 = a * c
-  res2 = b * d
-  res3 = (a + b) * (c + d)
-  res4 = res3 - res2 - res1
-  return(res1 * (10 ** num)) + (res4 * (10 ** (num // 2)) + res2)
-  
+        return 10**n * rec_mult(a, c, n//2) + 10**(n//2) * (rec_mult(a, d, n//2) + rec_mult(b, c, n//2)) + rec_mult(b, d, n//2)
