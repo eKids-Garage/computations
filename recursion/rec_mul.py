@@ -20,4 +20,5 @@ def rec_mul(n, m):
 
 a = int(input())
 b = int(input())
+print (a * b)
 print (rec_mul(a, b))
