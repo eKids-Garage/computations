@@ -26,6 +26,6 @@ y = int(y)
 
 print("\tsimple multiplication :   ",x*y) #  15185185047
 result = rec_mul(x, y, n)
-print("\trecursion multiplication :",round(result))#  округляю результат потому что иногда получается результат = 15233729.999999996 => резцльтат = 15233730
+print("\trecursion multiplication :",round(result))#  округляю результат потому что иногда получается результат = 15233729.999999996 => результат = 15233730
 
 
