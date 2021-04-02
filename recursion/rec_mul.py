@@ -1,3 +1,7 @@
+x = 7676
+y = 1034
+
+
 def length(a):
   i = 1
   while a > 9:
@@ -6,19 +10,18 @@ def length(a):
   return i
 
 
-def rec_mul(n, m):
-  x = length(n)
-  y = length(m)
-  if (x < 2 or y < 2):
-    return n * m
-  a = n // 10**(x//2)
-  b = n % 10**(x//2)
-  c = m // 10**(y//2)
-  d = m % 10**(y//2)
-  return (rec_mul(a,c) * 10**((x+y)//2)) + (rec_mul(a,d) * 10**(x//2)) + (rec_mul(b,c) * 10**(y//2)) + rec_mul(b,d)
+def rec_mul (x,y):
+  n = length(x)
+  m = length(y)
+  if n == 1 or m == 1:
+    return x * y
+  a = x // 10**(n//2)
+  b = x % 10**(n//2)
+  c = y // 10**(m//2)
+  d = y % 10**(m//2)
+  return (rec_mul(a,c) * 10**((n+m)//2)) + rec_mul(b,d) + (rec_mul(a,d) * 10**(n//2)) + (rec_mul(b,c) * 10**(m//2))
 
 
-a = int(input())
-b = int(input())
-print (a * b)
-print (rec_mul(a, b))
+
+print(x * y)
+print(rec_mul(x,y))
