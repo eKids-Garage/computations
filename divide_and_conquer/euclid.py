@@ -4,11 +4,14 @@ def euclidus(a, b):
   if a%b==0:
     print(b)
   else:
-    if a>b:
+    if b%a==0:
+      print (a)
+    elif a>b:
      euclidus(b, a%b)
     else:
      euclidus(a, b%a)
 
-euclidus(9823461, 2345673345)
+euclidus(6, 18)
+
 
     
