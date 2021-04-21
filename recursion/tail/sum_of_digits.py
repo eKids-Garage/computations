@@ -4,8 +4,30 @@
 # Вариант с хвостовой рекурсией преобразуйте в цикл while
 
 def sum(N):
-    return 0
+	if N>10:
+		return (N%10) + sum(N//10)
+	else:
+		return N
 
-def sum_tail(N, s):
-    return 0
+def sum_tail(N, s=0):
+	if N>10:
+		s = s + N%10
+		N = N//10
+		return sum_tail(N,s)
+	else:
+		return s+N	
 
+
+
+
+number = 440
+print(sum(number))
+print(sum_tail(number))
+
+s=0
+N = number
+while N>0 :
+	s = s + N%10
+	N = N//10
+
+print(s)
