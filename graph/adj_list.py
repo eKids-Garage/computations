@@ -3,7 +3,7 @@
 graph_a = [[3, 4], [2, 4]] # Complete the adjacency list for the Graph A
 
 
-# Graph B: Non-directed graph
+# Graph B: Directed graph
 # Vertices:
 graph_b = [[3, 4], [4]] # Complete the adjacency list for the Graph B
 
