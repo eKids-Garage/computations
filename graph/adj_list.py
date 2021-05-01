@@ -13,7 +13,7 @@ def is_adjacent(graph, vert_a, vert_b):
 
   # я не очень уверен в постановке задания, так что выберите решение которое нужно
 
-  return vert_b in graph[vert_a] or vert_a in graph_b  # Если учитывать что даже в ориентированом графе две вершины смежные
+  return vert_b in graph[vert_a] or vert_a in graph[vert_b]  # Если учитывать что даже в ориентированом графе две вершины смежные
 
 
 #   return vert_b in graph[vert_a]  # Если учитывать переход из вершины а в б но не наоборот
