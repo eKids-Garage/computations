@@ -13,6 +13,7 @@ def is_adjacent(graph, vert_a, vert_b):
     return False
 
 
+
 print(is_adjacent(graph_a, 5, 2))
 print(is_adjacent(graph_a, 0, 3))
 print(is_adjacent(graph_a, 3, 4))
