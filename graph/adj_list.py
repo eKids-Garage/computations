@@ -1,5 +1,3 @@
-import random
-
 # Graph A: Non-directed graph
 # Vertices:
 graph_a = [[3,4],[2,4],[1,3,5],[0,2,5],[0,1,5],[2,3,4]]
@@ -34,6 +32,5 @@ print(is_adjacent(graph_b, 5, 2))
 print(is_adjacent(graph_b, 0, 3))
 print(is_adjacent(graph_b, 3, 4))
 print(is_adjacent(graph_b, 2, 5))
-print()
-print(is_adjacent(graph_b, random.randint(0, 5), 0))
+
 
