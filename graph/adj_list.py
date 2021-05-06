@@ -8,7 +8,10 @@ def is_adjacent(graph, vert_a, vert_b):
 
 	while len(arr):
 		for vert in range(len(arr) - 1, -1,-1):
-			if arr[vert] == vert_b:
+			if arr[vert] == vert_a:
+				del arr[vert]
+
+			elif arr[vert] == vert_b:
 				return True
 		
 		for i in range(len(arr)):
