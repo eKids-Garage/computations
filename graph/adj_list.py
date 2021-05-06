@@ -3,7 +3,7 @@ graph_b = [[3, 4], [4], [1], [2], [5], [3, 2]]
 
 
 def is_adjacent(graph, vert_a, vert_b):
-	arr = [graph[vert_a][i] for i in range(len(graph[vert_a]))]
+	arr = graph[vert_a].copy()
 
 
 	while len(arr):
