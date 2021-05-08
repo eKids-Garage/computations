@@ -26,9 +26,25 @@ graph_b = [ [0, 0, 0, 1, 1, 0, 1, 0],  #  0
 
 
 def is_adjacent(graph, vert_a, vert_b):
-    #Complete the function
-    return False
+  arr=[]
+  for i in range(len(graph[0:vert_a])):
+    if graph[vert_a][i]==1:
+      arr.append(i)
 
+  while len(arr):
+    for vert in range(len(arr)-1):
+      if arr[vert] == vert_a:
+        del arr[vert]
+      elif arr[vert] == vert_b:
+        return True
+        
+    for i in range(len(arr)):
+      ind = arr[0]
+      del arr[0]
+      for j in range(len(graph[0:ind])):
+        if 1 == graph[ind][j]:
+          arr.append(j)
+  return False
 
 print("Graph A: ")
 for i in range(0, 8):
