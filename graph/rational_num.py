@@ -3,4 +3,4 @@
 
 
 def sum_rat(a, b):
-    return 0
+  
