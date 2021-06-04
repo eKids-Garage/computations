@@ -11,4 +11,4 @@ def divide(N, k=2):
 		k=k+1
 		return divide(N,k)
 
-divide(2000)
+divide(34)
