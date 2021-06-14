@@ -5,7 +5,6 @@
 
 def rec_mult(x, y, n, m):
   if n == 1 or 0.75:
-        print(x, y, m, n)
         return (x * y)/m 
   else: 
         a = x // 10 ** (n // 2)
@@ -41,9 +40,7 @@ def karatsuba(a,b):
        a = a * 10
        b = b * 10
        l = l + 1
-       m = m * 100 
-    print(q,w,n,k,o,m,l,a,b)  
+       m = m * 100  
     return rec_mult(a, b, l, m)
-print(0)
+
 print(karatsuba(1249, 300457))
-print(0)
