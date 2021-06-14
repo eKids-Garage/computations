@@ -4,7 +4,8 @@
 # степень двойки: 2, 4, 8, 16 и т.д.
 
 def rec_mult(x, y, n, m):
-  if n == 1:
+  if n == 1 or 0.75:
+        print(x, y, m, n)
         return (x * y)/m 
   else: 
         a = x // 10 ** (n // 2)
@@ -12,12 +13,14 @@ def rec_mult(x, y, n, m):
         c = y // 10 ** (n // 2)
         d = y % 10 ** (n // 2)
 
-        return (10**n * rec_mult(a, c, n//2, m) + 10**(n//2) * ((rec_mult(a, d, n//2, m) + rec_mult(b, c, n//2, m))) + rec_mult(b, d, n//2, m))
+        return (10**n * rec_mult(a, c, n//2, m) + 10**(n/2) * ((rec_mult(a, d, n/2, m) + rec_mult(b, c, n/2, m))) + rec_mult(b, d, n/2, m))
 
 
 def karatsuba(a,b):
+
     q = w = 10
     n = k = o = m = l = 1
+
     while a // q > 0:
         q = q*10
         n = n + 1
@@ -38,14 +41,9 @@ def karatsuba(a,b):
        a = a * 10
        b = b * 10
        l = l + 1
-       m = m * 100   
+       m = m * 100 
+    print(q,w,n,k,o,m,l,a,b)  
     return rec_mult(a, b, l, m)
-
-
-
-print(karatsuba(1234, 5678))
-
-
-
-
-
+print(0)
+print(karatsuba(1249, 300457))
+print(0)
